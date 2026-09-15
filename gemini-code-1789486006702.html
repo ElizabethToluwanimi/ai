@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Creative Studio | Turn Ideas Into Cinematic Content</title>
+  <meta name="description" content="Master cinematic AI video, photo-real visual generation, and AI storytelling. Enroll for ₦9,999 promo price." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Paystack Inline JS SDK -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#06080d',
+              charcoal: '#0d111a',
+              card: '#121826',
+              cyan: '#00f0ff',
+              blue: '#3b82f6',
+              purple: '#8b5cf6',
+              green: '#22c55e'
+            }
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 25px rgba(0, 240, 255, 0.35)',
+            'glow-purple': '0 0 25px rgba(139, 92, 246, 0.35)',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #06080d;
+      color: #f3f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .neon-border {
+      border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+    .glass-card {
+      background: rgba(18, 24, 38, 0.7);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #00f0ff 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="selection:bg-cyan-500 selection:text-black">
+
+  <!-- TOP PROMO BANNER -->
+  <div class="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 text-xs md:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+    <span class="bg-red-500/80 text-white px-2 py-0.5 rounded text-[11px] font-bold uppercase animate-pulse">Limited Promo</span>
+    <span>Join AI Creative Studio for just <strong class="text-cyan-300 font-bold">₦9,999</strong> (Regular ₦20,000). Offer closes soon!</span>
+    <a href="#enroll" class="underline ml-2 text-white font-semibold hover:text-cyan-300">Enroll Now &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 glass-card border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center font-black text-black text-xl shadow-glow-cyan">
+          AI
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-white block">AI CREATIVE <span class="text-cyan-400">STUDIO</span></span>
+          <span class="text-[10px] text-gray-400 uppercase tracking-widest block">areteai.camp</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
+        <a href="#showcase" class="hover:text-cyan-400 transition">Watch Samples</a>
+        <a href="#curriculum" class="hover:text-cyan-400 transition">Curriculum</a>
+        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+        <a href="#faq" class="hover:text-cyan-400 transition">FAQ</a>
+        <a href="https://wa.me/2349029343288?text=Hello%20Admission%2C%20I%20have%20a%20question%20about%20AI%20Creative%20Studio" target="_blank" class="flex items-center gap-1.5 text-green-400 hover:text-green-300 transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Admissions
+        </a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#enroll" class="px-6 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:opacity-90 transition shadow-glow-cyan">
+          JOIN CLASS • ₦9,999
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pt-2 pb-6 glass-card border-t border-white/10 space-y-3">
+      <a href="#showcase" class="block py-2 text-gray-300 hover:text-cyan-400">Watch Samples</a>
+      <a href="#curriculum" class="block py-2 text-gray-300 hover:text-cyan-400">Curriculum</a>
+      <a href="#projects" class="block py-2 text-gray-300 hover:text-cyan-400">Projects</a>
+      <a href="#faq" class="block py-2 text-gray-300 hover:text-cyan-400">FAQ</a>
+      <a href="https://wa.me/2349029343288" target="_blank" class="block py-2 text-green-400 font-semibold">Chat with Admission (09029343288)</a>
+      <a href="#enroll" class="block text-center py-3 bg-cyan-400 text-black font-bold rounded-xl">ENROLL NOW • ₦9,999</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-16 pb-20 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,240,255,0.08),transparent_50%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(139,92,246,0.08),transparent_50%)] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Copy -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card text-xs text-cyan-300 border border-cyan-500/30">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+            <span>NEXT COHORT REGISTRATION LIVE</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
+            TURN YOUR IDEAS INTO <span class="gradient-text">CINEMATIC AI</span> COMMERCIALS & CONTENT
+          </h1>
+
+          <p class="text-lg text-gray-400 max-w-2xl leading-relaxed">
+            Learn how to direct high-end brand ads, hyper-realistic product videos, dynamic characters, and storytelling using cutting-edge Generative AI tools — zero camera or high-end PC required.
+          </p>
+
+          <!-- Pricing Pill & Action -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+            <a href="#enroll" class="w-full sm:w-auto px-8 py-4 rounded-xl text-black font-extrabold text-base bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500 hover:scale-[1.02] transition shadow-glow-cyan text-center flex items-center justify-center gap-3">
+              <span>GET INSTANT ACCESS</span>
+              <span class="bg-black/20 px-2.5 py-0.5 rounded text-sm font-black">₦9,999</span>
+            </a>
+            <a href="#showcase" class="w-full sm:w-auto px-6 py-4 rounded-xl glass-card font-semibold text-gray-300 hover:text-white hover:border-cyan-500/50 transition text-center flex items-center justify-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-cyan-400"></i> Watch Student Reels
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-4 flex flex-wrap items-center gap-4 text-xs text-gray-400 justify-center lg:justify-start">
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i> Beginner Friendly</span>
+            <span>•</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i> Real Commercial Workflows</span>
+            <span>•</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i> Direct Telegram Community Access</span>
+          </div>
+        </div>
+
+        <!-- Right Featured Hero Video -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl p-2.5 relative shadow-2xl border border-cyan-500/30 group">
+            <div class="relative rounded-xl overflow-hidden bg-black aspect-video flex items-center justify-center">
+              <!-- Video Player Tag -->
+              <video id="heroVideo" class="w-full h-full object-cover" loop playsinline controls preload="metadata">
+                <!-- Using the Virela commercial as the main hero spotlight -->
+                <source src="virela_sneakers_commercial.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="p-3 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                <span class="font-bold text-gray-200">SAMPLE COMMERCIAL: Virela Sneaker Campaign</span>
+              </div>
+              <span class="text-cyan-400 font-mono">100% AI Generated</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WATCHABLE VIDEO SHOWCASE SECTION -->
+  <section id="showcase" class="py-20 border-t border-white/10 bg-black/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs uppercase tracking-widest font-bold text-cyan-400 mb-2">Watchable Project Demos</h2>
+        <h3 class="text-3xl sm:text-4xl font-black text-white">What You Will Learn To Create</h3>
+        <p class="text-gray-400 mt-3 text-sm sm:text-base">
+          These are sample commercials created using the exact pipelines, prompt frameworks, and AI motion engines covered in the course. Click play to watch them in action.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Video Card 1: ApexShift X1 -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition">
+          <div class="relative bg-black aspect-video">
+            <video class="w-full h-full object-cover" controls playsinline preload="metadata">
+              <source src="apexshift_sneaker_commercial.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Project 01 • Product Commercial</span>
+              <span class="text-xs text-gray-400 font-mono">3D Camera & Exploded View</span>
+            </div>
+            <h4 class="text-xl font-bold text-white">ApexShift X1 — Futuristic Tech Footwear</h4>
+            <p class="text-sm text-gray-400">
+              Master product deconstruction, floating components, neon studio lighting, and smooth camera pans using Midjourney, Kling AI & Runway Gen-3.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video Card 2: Virela Footwear -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition">
+          <div class="relative bg-black aspect-video">
+            <video class="w-full h-full object-cover" controls playsinline preload="metadata">
+              <source src="virela_sneakers_commercial.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Project 02 • Fashion Commercial</span>
+              <span class="text-xs text-gray-400 font-mono">AI Models & Consistent Brand Colors</span>
+            </div>
+            <h4 class="text-xl font-bold text-white">Virela — "Step into Confidence"</h4>
+            <p class="text-sm text-gray-400">
+              Learn character consistency, dynamic camera rotation, typography integration, and commercial voice syncing using ElevenLabs and CapCut.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video Card 3: Luxhee Herbal Shampoo -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition">
+          <div class="relative bg-black aspect-video">
+            <video class="w-full h-full object-cover" controls playsinline preload="metadata">
+              <source src="luxhee_shampoo_commercial.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Project 03 • Beauty & Organic Cosmetic</span>
+              <span class="text-xs text-gray-400 font-mono">Fluid Physics & Botanical Lighting</span>
+            </div>
+            <h4 class="text-xl font-bold text-white">Luxhee Neem & Tulsi — Nature’s Luxury</h4>
+            <p class="text-sm text-gray-400">
+              Direct slow-motion water droplets, botanical particle explosions, liquid gold pouring physics, and pristine hair model transitions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video Card 4: Pop Heaven Drink -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition">
+          <div class="relative bg-black aspect-video">
+            <video class="w-full h-full object-cover" controls playsinline preload="metadata">
+              <source src="pop_heaven_coconut_commercial.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Project 04 • FMCG Beverage Ad</span>
+              <span class="text-xs text-gray-400 font-mono">Milk Splash & Beach Sunset Scene</span>
+            </div>
+            <h4 class="text-xl font-bold text-white">Pop Heaven — "Taste The Source"</h4>
+            <p class="text-sm text-gray-400">
+              Produce rich coconut milk crowns, ice cube scattering, can condensation shaders, and complete sensory storytelling from prompt to timeline.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="#enroll" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-cyan-400 text-black font-black hover:opacity-90 transition shadow-glow-cyan">
+          <span>ENROLL TO LEARN THESE EXACT WORKFLOWS</span>
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRADITIONAL VS AI COMPARISON -->
+  <section class="py-20 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-white">AI Is Changing Content Creation. Are You Ready?</h2>
+        <p class="text-gray-400 mt-4 text-base">
+          Today, one creative person equipped with the right AI workflows can produce visual quality that previously required an entire production house.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Traditional Card -->
+        <div class="glass-card p-8 rounded-2xl border-red-500/20 border">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center font-bold">
+              <i data-lucide="x-circle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Traditional Production</h3>
+          </div>
+          <ul class="space-y-4 text-sm text-gray-400">
+            <li class="flex items-start gap-3">
+              <i data-lucide="minus" class="w-4 h-4 text-red-400 mt-1 flex-shrink-0"></i>
+              <span>₦2M - ₦5M+ budget for high-end studio lighting, cameras, and lenses</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="minus" class="w-4 h-4 text-red-400 mt-1 flex-shrink-0"></i>
+              <span>Requires directors, actors, set designers, sound engineers, and colorists</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="minus" class="w-4 h-4 text-red-400 mt-1 flex-shrink-0"></i>
+              <span>Weeks or months to script, shoot, reshoot, edit, and deliver</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="minus" class="w-4 h-4 text-red-400 mt-1 flex-shrink-0"></i>
+              <span>Steep technical barrier to entry for solo creators and small businesses</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- AI Studio Card -->
+        <div class="glass-card p-8 rounded-2xl border-cyan-500/30 border shadow-glow-cyan/20">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-lg bg-cyan-400/10 text-cyan-400 flex items-center justify-center font-bold">
+              <i data-lucide="check-circle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-cyan-300">AI Creative Studio Workflow</h3>
+          </div>
+          <ul class="space-y-4 text-sm text-gray-300">
+            <li class="flex items-start gap-3">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0"></i>
+              <span>Zero expensive hardware — generate cinematic shots from your regular laptop</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0"></i>
+              <span>You are the director: generate original characters, voiceovers, music, and scenes</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0"></i>
+              <span>Produce high-impact client campaigns in hours instead of months</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0"></i>
+              <span>Beginner friendly: follow step-by-step repeatable production blueprints</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 MODULES CURRICULUM -->
+  <section id="curriculum" class="py-20 border-t border-white/10 bg-black/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs uppercase tracking-widest font-bold text-cyan-400 mb-2">Step-by-Step Curriculum</h2>
+        <h3 class="text-3xl sm:text-4xl font-black text-white">What You'll Learn Inside</h3>
+        <p class="text-gray-400 mt-3">From raw concept to broadcast-ready video editing and client monetization.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-cyan-400 font-mono text-sm font-bold">MODULE 01</div>
+          <h4 class="text-lg font-bold text-white">Generative AI Foundations</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Understanding creative AI models, architecture, prompt craft, and setting up your creative sandbox.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-cyan-400 font-mono text-sm font-bold">MODULE 02</div>
+          <h4 class="text-lg font-bold text-white">Cinematic AI Imaging</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Controlling lighting, camera angles, textures, lens types, and photorealistic product shots.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-cyan-400 font-mono text-sm font-bold">MODULE 03</div>
+          <h4 class="text-lg font-bold text-white">AI Video Generation</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Text-to-video, Image-to-video, camera physics, slow motion, loop creation, and cinematic movement.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-cyan-400 font-mono text-sm font-bold">MODULE 04</div>
+          <h4 class="text-lg font-bold text-white">AI Storytelling & Scripts</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Developing compelling narrative arcs, emotional ad copy, 30s/60s commercial scripts with AI.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-cyan-400 font-mono text-sm font-bold">MODULE 05</div>
+          <h4 class="text-lg font-bold text-white">Character Consistency</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Creating recurring characters, face locking, maintaining clothing, expressions, and angles across scenes.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-cyan-400 font-mono text-sm font-bold">MODULE 06</div>
+          <h4 class="text-lg font-bold text-white">Commercial Ads & Social</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Creating viral Reels, TikToks, high-converting product ads, YouTube videos, and short films.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-cyan-400 font-mono text-sm font-bold">MODULE 07</div>
+          <h4 class="text-lg font-bold text-white">End-to-End Production</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Assembling all tools: voice cloning, sound design, CapCut/Premiere color grading, and final export.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-cyan-400 font-mono text-sm font-bold">MODULE 08</div>
+          <h4 class="text-lg font-bold text-white">Monetization & Clients</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">Offering AI video creation services to local & international brands, pricing your work, and landing clients.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ENROLLMENT & PAYSTACK PAYMENT SECTION -->
+  <section id="enroll" class="py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-cyan-500/40 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-gradient-to-l from-cyan-500/20 to-transparent w-full h-2"></div>
+        
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="bg-cyan-500/10 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/20 uppercase tracking-widest">
+            One-Time Access • Instant Enrollment
+          </span>
+          <h3 class="text-3xl sm:text-4xl font-black text-white mt-4">Join AI Creative Studio</h3>
+          
+          <div class="mt-4 flex items-center justify-center gap-3">
+            <span class="text-gray-500 line-through text-2xl font-bold">₦20,000</span>
+            <span class="text-4xl sm:text-5xl font-black text-cyan-400">₦9,999</span>
+          </div>
+          <p class="text-gray-400 text-xs mt-2">Promo price valid for this cohort. Pay via Paystack card, bank transfer, or USSD.</p>
+        </div>
+
+        <!-- Student Registration Form -->
+        <form id="paymentForm" class="space-y-6">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Full Name *</label>
+              <input type="text" id="studentName" required placeholder="e.g. Chukwudi Okafor" class="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/10 text-white focus:outline-none focus:border-cyan-400 text-sm" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Email Address *</label>
+              <input type="email" id="studentEmail" required placeholder="your.email@gmail.com" class="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/10 text-white focus:outline-none focus:border-cyan-400 text-sm" />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">WhatsApp Phone Number *</label>
+              <input type="tel" id="studentPhone" required placeholder="e.g. 08012345678" class="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/10 text-white focus:outline-none focus:border-cyan-400 text-sm" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Experience Level</label>
+              <select id="studentLevel" class="w-full px-4 py-3.5 rounded-xl bg-black/60 border border-white/10 text-white focus:outline-none focus:border-cyan-400 text-sm">
+                <option value="Complete Beginner">Complete Beginner (Zero AI Experience)</option>
+                <option value="Beginner">Beginner (Used ChatGPT / Free Tools)</option>
+                <option value="Intermediate">Intermediate (Used Midjourney / Runway)</option>
+                <option value="Creator / Pro">Content Creator / Video Editor</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Included Features Checklist -->
+          <div class="p-4 rounded-xl bg-white/5 border border-white/5 space-y-2 text-xs text-gray-300">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+              <span>Full 8-Module Video Course Access & Workflow Templates</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+              <span>Commercial Product & Sneaker Ad Prompt Database</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+              <span>Direct access to the VIP Telegram Mentorship Community</span>
+            </div>
+          </div>
+
+          <!-- Paystack Pay Button -->
+          <button type="submit" id="payButton" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500 text-black font-black text-lg tracking-wide hover:opacity-90 transition shadow-glow-cyan flex items-center justify-center gap-2">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+            <span>PAY ₦9,999 VIA PAYSTACK</span>
+          </button>
+
+          <p class="text-center text-[11px] text-gray-500">
+            Secure 256-bit encrypted checkout powered by Paystack. After payment, you will be redirected automatically to our Telegram community.
+          </p>
+        </form>
+
+        <!-- Admission Chat Alternative -->
+        <div class="mt-8 pt-6 border-t border-white/10 text-center flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-gray-400">
+          <span>Prefer direct bank transfer or having issues?</span>
+          <a href="https://wa.me/2349029343288?text=Hello%20Admission%2C%20I%20want%20to%20pay%20the%20promo%20price%20of%209999%20via%20direct%20transfer" target="_blank" class="text-green-400 font-bold hover:underline flex items-center gap-1">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> Chat on WhatsApp (09029343288)
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SUCCESS MODAL (If user doesn't get redirected automatically) -->
+  <div id="successModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full p-8 rounded-3xl text-center space-y-6 border border-cyan-500/50">
+      <div class="w-16 h-16 rounded-full bg-cyan-400/20 text-cyan-400 mx-auto flex items-center justify-center">
+        <i data-lucide="check-circle" class="w-10 h-10"></i>
+      </div>
+      <div>
+        <h3 class="text-2xl font-black text-white">Payment Confirmed!</h3>
+        <p class="text-gray-300 text-sm mt-2">
+          Welcome to AI Creative Studio. Click below to join the private Telegram student group.
+        </p>
+      </div>
+      <a href="https://t.me/+TkCudhbDW2UwMzY8" id="telegramRedirectBtn" target="_blank" class="block w-full py-4 rounded-xl bg-cyan-400 text-black font-black hover:opacity-90 transition">
+        JOIN TELEGRAM GROUP NOW &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-20 border-t border-white/10 bg-black/40">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-xs uppercase tracking-widest font-bold text-cyan-400 mb-2">Got Questions?</h2>
+        <h3 class="text-3xl font-black text-white">Frequently Asked Questions</h3>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <h4 class="font-bold text-white text-base">Do I need prior video editing or AI experience?</h4>
+          <p class="text-sm text-gray-400 mt-2">
+            No. The training is structured step-by-step for absolute beginners, walking you from basic prompt logic up to complex multi-scene commercial assembly.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <h4 class="font-bold text-white text-base">Do I need a powerful gaming computer?</h4>
+          <p class="text-sm text-gray-400 mt-2">
+            No. The AI models run on cloud servers. Any standard laptop or computer with an internet browser is all you need.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <h4 class="font-bold text-white text-base">How will I access the course and student group?</h4>
+          <p class="text-sm text-gray-400 mt-2">
+            Immediately upon payment confirmation, you are redirected directly to our private Telegram channel and discussion forum where links, project briefs, and guides are delivered.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-xl p-5 border border-white/5">
+          <h4 class="font-bold text-white text-base">Can I make money offering this as a freelance service?</h4>
+          <p class="text-sm text-gray-400 mt-2">
+            Yes! Module 8 specifically covers how to pitch brands, product owners, and e-commerce companies for commercial video creation and social media campaigns.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-white/10 bg-black text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="space-y-2 text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2">
+          <div class="w-6 h-6 rounded-lg bg-cyan-400 text-black font-black flex items-center justify-center text-xs">AI</div>
+          <span class="text-white font-bold tracking-tight">AI CREATIVE STUDIO</span>
+        </div>
+        <p class="text-xs text-gray-500">Learn AI. Create Content. Build The Future.</p>
+        <div class="text-xs text-gray-400 space-y-1">
+          <p>Email: <a href="mailto:areteai.camp@gmail.com" class="text-cyan-400 hover:underline">areteai.camp@gmail.com</a></p>
+          <p>Admission line: <a href="tel:09029343288" class="text-cyan-400 hover:underline">09029343288</a></p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 text-xs">
+        <a href="#showcase" class="hover:text-white">Demos</a>
+        <a href="#curriculum" class="hover:text-white">Curriculum</a>
+        <a href="#enroll" class="hover:text-white">Register</a>
+        <a href="https://wa.me/2349029343288" target="_blank" class="text-green-400 hover:underline">WhatsApp Admission</a>
+      </div>
+
+      <div class="text-xs text-gray-500">
+        &copy; 2026 AI Creative Studio. All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING ADMISSIONS WHATSAPP BUTTON -->
+  <a href="https://wa.me/2349029343288?text=Hello%20Admission%2C%20I%20have%20an%20inquiry%20regarding%20the%20AI%20Creative%20Studio%20Promo%20Class." target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl font-bold text-sm transition transform hover:scale-105">
+    <i data-lucide="message-circle" class="w-5 h-5"></i>
+    <span class="hidden sm:inline">Chat with Admission</span>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script>
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // PAYSTACK CONFIGURATION & TELEGRAM REDIRECT
+    const TELEGRAM_LINK = "https://t.me/+TkCudhbDW2UwMzY8";
+    const PAYSTACK_PUBLIC_KEY = "pk_live_your_actual_key_here"; // Replace with your pk_live or pk_test key
+
+    const paymentForm = document.getElementById('paymentForm');
+    const successModal = document.getElementById('successModal');
+
+    paymentForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('studentName').value;
+      const email = document.getElementById('studentEmail').value;
+      const phone = document.getElementById('studentPhone').value;
+
+      // 9,999 NGN in kobo (Paystack requires amount in kobo)
+      const amountInKobo = 9999 * 100;
+
+      // If user hasn't replaced key yet, allow a fallback demo flow
+      if (PAYSTACK_PUBLIC_KEY.includes("your_actual_key_here")) {
+        console.warn("Using simulated transaction mode because Live Paystack key hasn't been pasted yet.");
+        const simulated = confirm("Paystack Integration Ready!\n\nTo connect live payments, replace 'pk_live_your_actual_key_here' with your Paystack Public Key.\n\nClick OK to simulate a successful ₦9,999 payment and test the redirect to your Telegram group!");
+        if (simulated) {
+          window.location.href = TELEGRAM_LINK;
+        }
+        return;
+      }
+
+      const handler = PaystackPop.setup({
+        key: PAYSTACK_PUBLIC_KEY,
+        email: email,
+        amount: amountInKobo,
+        currency: "NGN",
+        ref: 'AICS_' + Math.floor((Math.random() * 1000000000) + 1),
+        metadata: {
+          custom_fields: [
+            { display_name: "Student Name", variable_name: "student_name", value: name },
+            { display_name: "WhatsApp Phone", variable_name: "phone_number", value: phone }
+          ]
+        },
+        callback: function(response) {
+          // Payment confirmed!
+          successModal.classList.remove('hidden');
+          // Automatically redirect to telegram group
+          setTimeout(() => {
+            window.location.href = TELEGRAM_LINK;
+          }, 1500);
+        },
+        onClose: function() {
+          alert('Transaction was cancelled. You can also chat with admission at 09029343288 if you need assistance.');
+        }
+      });
+
+      handler.openIframe();
+    });
+  </script>
+</body>
+</html>
